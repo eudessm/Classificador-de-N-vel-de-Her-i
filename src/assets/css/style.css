@@ -1,0 +1,157 @@
+/* Quando o vídeo estiver visível */
+body.video-page {
+    background-color: #000000; /* Fundo preto */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout da página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #080808;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start; /* Ajuste para posicionar à esquerda */
+    align-items: center;
+    padding: 20px;
+    height: 100vh; /* Faz o main ocupar a altura total da tela */
+    gap: 20px;
+}
+
+/* Quadro principal */
+.form-container {
+    width: 40%; /* Reduz a largura do quadro */
+    max-width: 350px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1f4c8b, #4c81b3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1; /* Coloca o quadro acima das imagens de fundo */
+    position: relative;
+    margin-left: 20px; /* Ajuste de margem para posicionamento à esquerda */
+}
+
+h2 {
+    color: #d6d85f;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 1.1em;
+    color: #91cf2d;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #0f79eb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #dceb0ed3;
+}
+
+/* Estilos para o vídeo de fundo */
+.video-container {
+    width: 80%; /* O vídeo ocupa metade da largura */
+    height: 104%; /* E ocupa a altura total da tela */
+    max-width: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+}
+
+/* Esconde o contêiner do vídeo quando a classe `hidden` é adicionada */
+.video-container.hidden {
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container, .video-container {
+        width: 90%; /* Ajusta a largura para telas pequenas */
+    }
+
+    .video-container iframe {
+        height: auto;
+    }
+}
+
+/* Estilo do footer */
+footer {
+    margin-top: auto;
+    padding: 10px 0;
+    background-color: rgba(121, 119, 224, 0.8);
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Estilo para o botão de voltar ao vídeo */
+#voltarBtn {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #ff6347; /* Cor de fundo para o botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#voltarBtn:hover {
+    background-color: #ff4500;
+}
+
+/* Esconde o botão quando não estiver visível */
+#voltarBtn.hidden {
+    display: none;
+}

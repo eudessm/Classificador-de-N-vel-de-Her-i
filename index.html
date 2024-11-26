@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Nível de Herói</title>
+    <link rel="stylesheet" href="src/assets/css/style.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <main>
+        <!-- Contêiner do formulário de entrada -->
+        <section class="form-container">
+            <h2>Classificação do Herói</h2>
+            <form>
+                <label for="nomeHeroi">Nome do Herói:</label>
+                <input type="text" id="nomeHeroi" placeholder="Digite o nome do herói" aria-required="true">
+                
+                <label for="xpHeroi">Experiência (XP):</label>
+                <input type="number" id="xpHeroi" placeholder="Digite o XP do herói" aria-required="true">
+                
+                <button type="button" id="classificarBtn">Classificar</button><br><br>
+                
+                <button id="voltarBtn" class="hidden">Voltar ao vídeo</button>
+            </form>
+            
+            <output aria-live="polite" id="resultado"></output>
+        </section>
+        
+        <!-- Contêiner do vídeo de fundo -->
+        <section class="video-container" id="videoContainer">
+            <iframe id="videoPlayer" 
+                    src="https://www.youtube.com/embed/CYQsAGUR8eo?si=n0OVl56kr9K5vzGf" 
+                    title="Vídeo de fundo" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Douglas Lucio - IONKOD</p>
+    </footer>
+
+    <script src="src/assets/js/script.js"></script>
+</body>
+</html>
